@@ -1,11 +1,14 @@
+const bangladesh = ["Dhaka", "Barishal", "Sylet", "Khulna", "Chottogram", "Rajsahi", "Rongpur"];
 const ContactForm = () => {
     return (
         <div>
-            <form action="">
-                <input type="text" placeholder='name' /> <br/>
-                <input type="text" placeholder='number' /> <br/>
-                <input type="submit" />
-            </form>
+            <ol>
+                {
+                    bangladesh.map((items, index)=>{
+                        return <li key={index.toString()}>{items}</li>
+                    })
+                }
+            </ol>
         </div>
     );
 };

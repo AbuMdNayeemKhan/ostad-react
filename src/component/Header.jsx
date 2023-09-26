@@ -1,11 +1,16 @@
+let loginStatus = (status) => {
+    if(status === true){
+        return <button>LogOut</button>
+    } else {
+        return <button>LogIn</button>
+    }
+}
+
 const Header = () => {
-    return (
-        <div>
-            <ul>
-                <li>Home</li>
-                <li>Contact</li>
-            </ul>
-        </div>
+    return(
+        <>
+            {loginStatus(false)}
+        </>
     );
 };
 
