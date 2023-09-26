@@ -1,7 +1,8 @@
-const Hero = () => {
+const Hero = (props) => {
     return (
         <div>
-            <h1>Hello Hero</h1>
+            <h1>{props.title}</h1>
+            <p>{props.dis}</p>
         </div>
     );
 };
