@@ -1,9 +1,14 @@
 import Hero from './component/Hero';
 
 const App = () => {
+  const ItemObj = {
+    name: 'Nayeem Khan',
+    age: '25',
+    city: 'Dhaka',
+  }
   return (
     <div>
-      <Hero title="Learn React" dis="It's makes monye for you."/>
+      <Hero item={ItemObj}/>
     </div>
   );
 };
