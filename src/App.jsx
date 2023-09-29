@@ -1,14 +1,16 @@
-import Hero from './component/Hero';
+import { useRef } from "react";
 
 const App = () => {
-  const ItemObj = {
-    name: 'Nayeem Khan',
-    age: '25',
-    city: 'Dhaka',
+
+  let myHandaling = useRef();
+  
+  const change = () => {
+    myHandaling.innerText = "Hello World!";
   }
   return (
     <div>
-      <Hero item={ItemObj}/>
+      <button onClick={change} >Change</button>
+      <h1 ref={(h1) => myHandaling = h1}>Hello Barishal!</h1>
     </div>
   );
 };
