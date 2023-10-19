@@ -1,15 +1,23 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const App = () => {
-  let myNumber = useRef(0);
-  const change = () => {
-    myNumber.current++;
-    console.log(myNumber.current);
+  let [myObj, setMyObj] = useState({
+    name: "Nayeem Khan",
+    age: 25,
+    work: "Front-end Developer"
+  })
+
+  let change = () => {
+    setMyObj({
+        name: "Zioun Khan",
+        age: 25,
+        work: "Front-end Developer"
+      })
   }
-  
   return (
     <div>
-      <button onClick={change}>Click</button>
+      <h1>My name is: {myObj.name}</h1>
+      <button onClick={change}>Change</button>
     </div>
   );
 };
